@@ -14,4 +14,9 @@
       text-decoration: underline;
     }
   }
+
+  .post-list__items > li + li {
+    border-top: 1px dashed lightgrey;
+    padding-top: 2rem;
+  }
 }

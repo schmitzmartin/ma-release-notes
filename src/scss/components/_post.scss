@@ -22,16 +22,15 @@
       color: var(--color-dark);
       position: relative;
       display: inline-block;
-      background: var(--color-theme-highlight);
-      padding: 0.2rem 0.4rem 0.3rem 0.4rem;
-      text-decoration: none;
+      text-decoration: underline;
       word-break: break-word;
-
+      font-weight: 600;
+      transition: all 0.2s ease-in-out;
       @include apply-utility('leading', 'tight');
     }
 
     a:not([class]):hover {
-      text-decoration: underline;
+      color: var(--color-theme-primary);
     }
 
     code {

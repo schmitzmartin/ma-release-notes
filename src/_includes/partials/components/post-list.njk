@@ -1,17 +1,20 @@
 {% if postListItems.length %}
-  <section class="[ post-list ] [ pad-top-700 gap-bottom-900 ]">
+  <section class="[ post-list ] [ pad-top-400 gap-bottom-900 ]">
     <div class="[ inner-wrapper ] [ sf-flow ]">
-      <h2 class="[ post-list__heading ] [ text-700 md:text-800 ]">{{ postListHeading }}</h2>
+      {# <h2 class="[ post-list__heading ] [ text-700 md:text-800 ]">{{ postListHeading }}</h2> #}
       <ol class="[ post-list__items ] [ sf-flow ] [ pad-top-300 ]" reversed>
         {% for item in postListItems %}
           {% if item.date.getTime() <= global.now %}
             <li class="post-list__item">
+              <article class="[ release-note ] [ post ] [ h-entry ]">
               <h3 class="font-base leading-tight text-600 weight-mid">
                 <a href="{{ item.url }}" class="post-list__link" rel="bookmark">{{ item.data.title }}</a>
               </h3>
-              <p class="text-500 gap-top-300 weight-mid">
-                <time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
-              </p>
+                {# <time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time> #}
+                <div class="[ post__body ] [ inner-wrapper ] [ leading-loose pad-top-900 {{ 'pad-bottom-900' if not site.enableThirdPartyComments }} text-500 ] [ sf-flow ] [ e-content ]">
+                {{ item.data.content | safe }}
+                </div>
+              </article>
             </li>
           {% endif %}
         {% endfor %}
