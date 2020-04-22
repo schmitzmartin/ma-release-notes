@@ -15,8 +15,15 @@
     }
   }
 
-  .post-list__items > li + li {
+  &__items {
+  }
+
+  &__items > li + li {
     border-top: 1px dashed lightgrey;
     padding-top: 2rem;
+  }
+
+  li:not([class]) {
+    list-style: disc;
   }
 }

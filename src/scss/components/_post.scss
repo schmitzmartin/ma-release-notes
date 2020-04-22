@@ -94,6 +94,7 @@
 
     figure img,
     pre > code,
+    video,
     .video-player {
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     }
@@ -101,6 +102,11 @@
     figure img {
       position: relative;
       z-index: 1;
+    }
+
+    li > video {
+      margin-top: get-size(500);
+      margin-bottom: get-size(500);
     }
 
     figcaption {

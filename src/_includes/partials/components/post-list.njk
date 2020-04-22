@@ -5,11 +5,12 @@
       <ol class="[ post-list__items ] [ sf-flow ] [ pad-top-300 ]" reversed>
         {% for item in postListItems %}
           {% if item.date.getTime() <= global.now %}
-            <li class="post-list__item">
+            <li class="[ post-list__item ] [ sf-flow ]">
               <article class="[ release-note ] [ post ] [ h-entry ]">
-              <h3 class="font-base leading-tight text-600 weight-mid">
-                <a href="{{ item.url }}" class="post-list__link" rel="bookmark">{{ item.data.title }}</a>
-              </h3>
+              <h2 class="font-base leading-tight weight-mid">
+                {# <a href="{{ item.url }}" class="post-list__link" rel="bookmark">{{ item.data.title }}</a> #}
+                {{ item.data.title }}
+              </h2>
                 {# <time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time> #}
                 <div class="[ post__body ] [ inner-wrapper ] [ leading-loose pad-top-900 {{ 'pad-bottom-900' if not site.enableThirdPartyComments }} text-500 ] [ sf-flow ] [ e-content ]">
                 {{ item.data.content | safe }}
