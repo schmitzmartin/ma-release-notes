@@ -1,5 +1,5 @@
 ---
-title: Tag Archive
+title: Einträge nach Tags
 pagination:
   data: collections
   size: 1
@@ -29,7 +29,7 @@ permalink: /tags/{{ tag }}/
 {% block content %}
   <main id="main-content" tabindex="-1">
     {% include "partials/components/intro.njk" %}
-    {% include "partials/components/post-list.njk" %}
+    {% include "partials/components/archive-list.njk" %}
     {% include "partials/components/pagination.njk" %}
   </main>
 {% endblock %}

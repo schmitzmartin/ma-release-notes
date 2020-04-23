@@ -126,7 +126,7 @@
   }
 
   &__footer {
-    background: var(--color-theme-highlight);
+    // background: var(--color-theme-highlight);
 
     h2 {
       flex-shrink: 0;
@@ -139,7 +139,7 @@
     }
 
     a {
-      background: var(--color-bg);
+      background: var(--color-primary-glare);
       padding: 0.4rem 0.6rem;
     }
   }
