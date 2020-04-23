@@ -1,8 +1,8 @@
 {
   "items": [
     {
-      "text": "Home",
-      "url": "/",
+      "text": "Über unsere Releases",
+      "url": "/pages/about-releases",
       "external": false
     },
     {

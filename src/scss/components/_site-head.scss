@@ -1,8 +1,10 @@
 .site-head {
+  background-color: var(--color-deep-blue);
+  color: var(--color-light);
   &__site-name {
     font-weight: 700;
     text-decoration: none;
-    color: var(--color-text);
+    color: var(--color-light);
   }
 
   border-bottom: 1px dashed lightgrey;

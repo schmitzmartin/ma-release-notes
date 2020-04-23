@@ -11,6 +11,20 @@
                 {# <a href="{{ item.url }}" class="post-list__link" rel="bookmark">{{ item.data.title }}</a> #}
                 {{ item.data.title }}
               </h2>
+              {% if item.data.version %}
+            <div class="[ box-flex align-center ]">
+              {# <p class="font-base text-600 weight-mid">Filed under</p> #}
+              <ul class="[ box-flex align-center] [ p-category ] [ tag-list ]">
+                {% for item in item.data.version %}
+                  <li class="tag">
+                     v{{ item }}
+                  </li>
+                {% endfor %}
+              </ul>
+          </div>
+              {% endif %}
+              <div class="[ tag-list ]">
+              </div>
                 {# <time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time> #}
                 <div class="[ post__body ] [ inner-wrapper ] [ leading-loose pad-top-900 {{ 'pad-bottom-900' if not site.enableThirdPartyComments }} text-500 ] [ sf-flow ] [ e-content ]">
                 {{ item.data.content | safe }}

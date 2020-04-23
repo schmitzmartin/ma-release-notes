@@ -23,4 +23,14 @@
   li:not([class]) {
     list-style: disc;
   }
+
+  .tag-list > * + * {
+    margin-left: #{get-size(base)};
+  }
+
+  .tag {
+    background: var(--color-primary-glare);
+    padding: 0.2rem 0.4rem;
+    margin-top: #{get-size(300)};
+  }
 }
