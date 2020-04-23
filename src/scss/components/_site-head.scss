@@ -7,7 +7,6 @@
     color: var(--color-light);
   }
 
-  border-bottom: 1px dashed lightgrey;
   &__logo {
     max-height: #{get-size(max)};
   }
