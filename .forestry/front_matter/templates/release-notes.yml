@@ -1,0 +1,22 @@
+---
+label: Release Notes
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: list
+  name: version
+  label: version
+- type: boolean
+  name: draft
+  label: draft
+- type: text
+  name: metaTitle
+  label: metaTitle
+- type: list
+  name: tags
+  label: tags
