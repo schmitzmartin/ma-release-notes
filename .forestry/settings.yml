@@ -14,6 +14,8 @@ sections:
   label: posts
   create: all
   match: "**/*.md"
+  templates:
+  - release-notes
 upload_dir: src/images
 public_path: dist/images
 front_matter_path: ''
