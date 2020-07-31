@@ -5,6 +5,9 @@ fields:
 - type: text
   name: title
   label: title
+- type: text
+  name: metaTitle
+  label: metaTitle
 - type: datetime
   name: date
   label: date
@@ -14,9 +17,6 @@ fields:
 - type: boolean
   name: draft
   label: draft
-- type: text
-  name: metaTitle
-  label: metaTitle
 - type: list
   name: tags
   label: tags
